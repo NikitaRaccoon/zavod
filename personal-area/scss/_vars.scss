@@ -1,0 +1,21 @@
+$green: #00965E;
+$green-light: #00B773;
+$text-main: #535C69;
+$text-additional: #282828;
+
+
+@mixin resp($prop, $val, $resp, $mobile-val ) {
+    #{$prop}:#{$val};
+
+    @media (max-width: #{$resp}px) {
+        #{$prop}: #{$mobile-val};
+    }
+}
+
+;
+
+@mixin mobile($responsive) {
+    @media (max-width:#{$responsive}) {
+        @content
+    }
+}

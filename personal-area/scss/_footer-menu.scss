@@ -1,0 +1,35 @@
+@import "_vars.scss";
+
+.footer-menu {
+
+    padding: 10px 15px 8px 15px;
+    display: none;
+
+    &__buttons {
+        display: flex;
+        gap: 22px;
+        justify-content: center;
+    }
+
+    &__btn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3px;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 12px;
+        color: $text-additional;
+
+        img {
+            width: 24px;
+            height: 24px;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .footer-menu {
+        display: block;
+    }
+}

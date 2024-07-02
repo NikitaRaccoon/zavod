@@ -1,0 +1,112 @@
+.sidebar {
+    flex: 0 0 300px;
+    padding: 0px 20px 0px 30px;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        height: calc(100vh - 116px);
+
+    }
+
+    &__menu {
+        flex: 1 0 auto;
+
+        li {
+            a {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                padding: 18px 15px;
+                transition: .3s;
+                border-radius: 10px;
+
+                &:hover {
+                    background-color: #F6F7F8;
+                }
+            }
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        display: flex;
+        align-items: center;
+        padding: 18px 15px;
+        transition: .3s;
+        border-radius: 10px;
+
+        &:hover {
+            background-color: #F6F7F8;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+
+    .sidebar {
+        position: fixed;
+        top: 50px;
+        left: -100%;
+        background-color: #fff;
+        z-index: 2;
+        height: calc(100vh - 50px);
+        width: 100%;
+        max-width: 500px;
+        padding: 0px;
+        transition: .3s;
+
+        &__container {
+            display: flex;
+            flex-direction: column;
+            height: calc(100vh - 50px);
+        }
+
+        &__menu {
+            flex: 1 0 auto;
+
+            li {
+                border-bottom: 1px solid #D7E4EA;
+
+                a {
+                    gap: 12px;
+                    padding: 18px 2 5px;
+                    border-radius: 0px;
+                }
+            }
+        }
+
+        &__buttons {
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        &__btn {
+            gap: 12px;
+            padding: 18px 2 5px;
+            border-radius: 0px;
+            border-top: 1px solid #D7E4EA;
+
+            &:hover {
+                background-color: #F6F7F8;
+            }
+        }
+    }
+
+    body {
+        &.burger {
+            .sidebar {
+                left: 0px;
+            }
+        }
+    }
+}

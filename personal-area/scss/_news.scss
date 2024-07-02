@@ -1,0 +1,198 @@
+@import "_vars.scss";
+
+.news {
+    display: flex;
+    gap: 20px;
+
+    &__container {
+        width: 100%;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__item {
+        background-color: #fff;
+        padding: 30px 25px 62px 25px;
+        border-radius: 10px;
+    }
+
+    &__author {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 30px;
+        align-items: center;
+    }
+
+    &__author-wrapepr {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__author-logo {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__author-name {
+        font-size: 16px;
+        line-height: 22px;
+        color: $text-additional;
+    }
+
+    &__author-date {
+        font-size: 13px;
+        line-height: 18px;
+        color: #999999;
+    }
+
+    &__item-row {
+        display: flex;
+        flex-direction: column;
+        padding-left: 60px;
+        @include resp(padding-left, 60px, 1336, 0px)
+    }
+
+    &__item-title {
+        color: $text-additional;
+        margin-bottom: 10px;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 22px;
+    }
+
+    &__item-description {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        margin-bottom: 20px;
+    }
+
+    &__item-img {
+        max-width: 600px;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    &__sidebar {
+        flex: 0 0 310px;
+        @include resp(display, block, 1200, none)
+    }
+
+    &__sidebar-title {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 22px;
+        text-transform: uppercase;
+        margin-bottom: 23px;
+    }
+
+    &__sidebar-notifications {
+        background-color: #fff;
+        padding: 20px 15px;
+        border-radius: 10px;
+    }
+
+    .btn {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        max-width: max-content;
+    }
+
+}
+
+.notifications {
+
+    &__list-top {
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px solid rgba(153, 153, 153, 0.3);
+        padding-bottom: 10px;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        padding: 10px 0px;
+    }
+
+    &__item-date {
+        font-size: 13px;
+        line-height: 18px;
+        color: #999999;
+    }
+
+    &__item-title {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 18px;
+        color: $text-additional;
+    }
+
+    &__list-bottom {
+        padding-top: 10px;
+    }
+}
+
+@media (max-width: 991px) {
+    .news {
+        display: flex;
+        gap: 0px;
+
+        &__list {
+            gap: 20px;
+        }
+
+        &__title {
+            display: none;
+        }
+
+        &__item {
+            padding: 15px;
+        }
+
+        &__author {
+            margin-bottom: 15px;
+        }
+
+        &__author-logo {
+            width: 40px;
+            height: 40px;
+        }
+
+        &__author-name {
+            font-size: 14px;
+            line-height: 22px;
+        }
+
+        &__author-date {
+            font-size: 11px;
+            line-height: 12px;
+        }
+
+        &__item-title {
+            margin-bottom: 5px;
+            font-size: 16px;
+        }
+
+        &__item-description {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+    }
+
+}

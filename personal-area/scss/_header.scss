@@ -1,0 +1,157 @@
+@import "_vars.scss";
+
+.header {
+
+    padding: 14px 30px;
+    background-color: #fff;
+
+    &__contaner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__wrapper {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+    }
+
+    &__logo {
+        width: 80px;
+        height: 50px;
+
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        flex: 1 0 auto;
+
+        p {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 22px;
+        }
+    }
+
+    &__btn {
+
+        &.btn {
+            border-radius: 5px;
+            padding: 14px 31px;
+        }
+
+        &.mobile {
+            @include resp(display, none, 1366, flex);
+        }
+
+        &.desctop {
+            @include resp(display, flex, 1366, none);
+        }
+    }
+
+    &__user {
+        display: flex;
+        @include resp(margin-right, 120px, 1366, 0px);
+        gap: 17px;
+        align-items: center;
+    }
+
+    &__user-photo {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__user-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    &__user-name {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .burger-btn {
+        display: none;
+    }
+}
+
+@media (max-width: 991px) {
+    .header {
+
+        padding: 5px 15px;
+
+        &__contaner {
+            justify-content: center;
+        }
+
+        &__wrapper {
+            gap: 17px;
+        }
+
+        &__wrapper-mobile {
+            flex: 1 0 100%;
+            justify-content: space-between;
+        }
+
+        &__logo {
+            display: none;
+        }
+
+        &__text {
+            display: none;
+        }
+
+        &__user {
+            gap: 17px;
+        }
+
+        &__btn {
+
+            &.btn {
+                padding: 7px 23px;
+            }
+        }
+
+        &__user-photo {
+            width: 40px;
+            height: 40px;
+        }
+
+        &__user-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        &__user-name {
+            font-size: 16px;
+            line-height: 19px;
+        }
+
+        &__user-organization {
+            font-size: 13px;
+            line-height: 15px;
+        }
+
+        .burger-btn {
+            display: block;
+        }
+    }
+}

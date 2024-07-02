@@ -1,0 +1,44 @@
+@import "_vars.scss";
+
+.requisites-edit {
+    form {
+        background-color: #fff;
+        padding: 50px;
+        border-radius: 10px;
+    }
+
+    .form__item {
+        max-width: 420px;
+    }
+
+    .application-form__group {
+        padding-bottom: 30px;
+    }
+
+    textarea {
+        min-height: 100px;
+    }
+
+    .btn {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 991px) {
+
+    .requisites-edit {
+        form {
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        .application-form__group {
+            padding-bottom: 15px;
+        }
+    }
+
+
+
+}
